@@ -79,8 +79,10 @@ export default function Hero() {
               animate="visible"
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <Button className="bg-primary hover:bg-primary/90" onClick={() => window.print()}>
-                <Download className="mr-2 h-4 w-4" /> Download PDF
+              <Button className="bg-primary hover:bg-primary/90" asChild>
+                <a href="/Shoeb_Raza_Resume.pdf" download>
+                  <Download className="mr-2 h-4 w-4" /> Download Resume
+                </a>
               </Button>
               <Button variant="outline" asChild>
                 <a href="#contact">

@@ -13,31 +13,31 @@ import { useState } from "react";
 export default function Contact() {
   const { email, phone, location, social } = profile.basics;
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = `Contact from ${formData.name}`;
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    
-    setFormData({ name: "", email: "", message: "" });
-  };
-  
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: ""
+  // });
+
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({ ...prev, [name]: value }));
+  // };
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   const subject = `Contact from ${formData.name}`;
+  //   const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+  //   window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+
+  //   toast({
+  //     title: "Message sent!",
+  //     description: "Thank you for your message. I'll get back to you soon.",
+  //   });
+
+  //   setFormData({ name: "", email: "", message: "" });
+  // };
+
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -47,25 +47,25 @@ export default function Contact() {
       }
     }
   };
-  
+
   const item = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  
+
   return (
     <AnimatedSection id="contact">
       <h2 className="section-title">Get In Touch</h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           {prefersReducedMotion ? (
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold mb-4">Contact Information</h3>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
@@ -78,7 +78,7 @@ export default function Contact() {
                       </a>
                     </div>
                   </div>
-                  
+
                   {phone && (
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
@@ -92,7 +92,7 @@ export default function Contact() {
                       </div>
                     </div>
                   )}
-                  
+
                   {location && (
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
@@ -106,30 +106,30 @@ export default function Contact() {
                   )}
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-bold mb-4">Follow Me</h3>
                 <SocialLinks links={social} iconSize={24} />
               </div>
             </div>
           ) : (
-            <motion.div 
+            <motion.div
               className="space-y-6"
               variants={container}
               initial="hidden"
               animate="visible"
             >
               <div>
-                <motion.h3 
+                <motion.h3
                   className="text-xl font-bold mb-4"
                   variants={item}
                   transition={{ duration: 0.5 }}
                 >
                   Contact Information
                 </motion.h3>
-                
+
                 <div className="space-y-4">
-                  <motion.div 
+                  <motion.div
                     className="flex items-center"
                     variants={item}
                     transition={{ duration: 0.5 }}
@@ -144,9 +144,9 @@ export default function Contact() {
                       </a>
                     </div>
                   </motion.div>
-                  
+
                   {phone && (
-                    <motion.div 
+                    <motion.div
                       className="flex items-center"
                       variants={item}
                       transition={{ duration: 0.5 }}
@@ -162,9 +162,9 @@ export default function Contact() {
                       </div>
                     </motion.div>
                   )}
-                  
+
                   {location && (
-                    <motion.div 
+                    <motion.div
                       className="flex items-center"
                       variants={item}
                       transition={{ duration: 0.5 }}
@@ -180,7 +180,7 @@ export default function Contact() {
                   )}
                 </div>
               </div>
-              
+
               <motion.div
                 variants={item}
                 transition={{ duration: 0.5 }}
@@ -191,11 +191,26 @@ export default function Contact() {
             </motion.div>
           )}
         </div>
-        
+
         <div>
           <h3 className="text-xl font-bold mb-4">Send a Message</h3>
-          
-          <form onSubmit={handleSubmit} className="space-y-4">
+
+          <form
+            action="https://formsubmit.co/el/rugelu"
+            method="POST"
+            onSubmit={() =>
+              toast({
+                title: "Message sent!",
+                description: "Thank you for your message. I'll get back to you soon.",
+              })
+            }
+            className="space-y-4"
+          >
+            {/* ✅ Hidden inputs for FormSubmit */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="#" />
+
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-1">
                 Name
@@ -204,12 +219,12 @@ export default function Contact() {
                 id="name"
                 name="name"
                 placeholder="Your name"
-                value={formData.name}
-                onChange={handleChange}
+                // value={formData.name}
+                // onChange={handleChange}
                 required
               />
             </div>
-            
+
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-1">
                 Email
@@ -219,12 +234,12 @@ export default function Contact() {
                 name="email"
                 type="email"
                 placeholder="your.email@example.com"
-                value={formData.email}
-                onChange={handleChange}
+                // value={formData.email}
+                // onChange={handleChange}
                 required
               />
             </div>
-            
+
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-1">
                 Message
@@ -234,12 +249,12 @@ export default function Contact() {
                 name="message"
                 placeholder="Your message..."
                 rows={5}
-                value={formData.message}
-                onChange={handleChange}
+                // value={formData.message}
+                // onChange={handleChange}
                 required
               />
             </div>
-            
+
             <Button type="submit" className="w-full">
               <Send className="mr-2 h-4 w-4" /> Send Message
             </Button>

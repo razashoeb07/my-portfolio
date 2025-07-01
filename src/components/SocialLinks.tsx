@@ -1,5 +1,10 @@
-
-import { Linkedin, Github, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { Linkedin, Github, Twitter, Facebook, Instagram, Youtube, Code } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 interface SocialLink {
@@ -14,10 +19,10 @@ interface SocialLinksProps {
   iconSize?: number;
 }
 
-export default function SocialLinks({ 
-  links, 
-  className, 
-  iconSize = 20 
+export default function SocialLinks({
+  links,
+  className,
+  iconSize = 20
 }: SocialLinksProps) {
   const getIcon = (iconName: string) => {
     switch (iconName.toLowerCase()) {
@@ -33,25 +38,33 @@ export default function SocialLinks({
         return <Instagram size={iconSize} />;
       case "youtube":
         return <Youtube size={iconSize} />;
+      case "code":
+        return <Code size={iconSize} />;
       default:
         return <Linkedin size={iconSize} />;
     }
   };
 
   return (
-    <div className={cn("flex items-center gap-4", className)}>
-      {links.map((link) => (
-        <a
-          key={link.platform}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={link.platform}
-          className="text-foreground/70 hover:text-primary transition-colors"
-        >
-          {getIcon(link.icon)}
-        </a>
-      ))}
-    </div>
+    <TooltipProvider>
+      <div className={cn("flex items-center gap-4", className)}>
+        {links.map((link) => (
+          <Tooltip key={link.platform}>
+            <TooltipTrigger asChild>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.platform}
+                className="text-foreground/70 hover:text-primary transition-colors"
+              >
+                {getIcon(link.icon)}
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>{link.platform}</TooltipContent>
+          </Tooltip>
+        ))}
+      </div>
+    </TooltipProvider>
   );
 }

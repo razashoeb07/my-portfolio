@@ -9,11 +9,11 @@ import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
-import Experience from "./sections/Experience";
+// import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Education from "./sections/Education";
-import Achievements from "./sections/Achievements";
-import Volunteering from "./sections/Volunteering";
+// import Achievements from "./sections/Achievements";
+// import Volunteering from "./sections/Volunteering";
 import Contact from "./sections/Contact";
 import profile from "./data/profile";
 
@@ -23,21 +23,21 @@ const App = () => {
   useEffect(() => {
     // Update metadata from profile data
     document.title = profile.meta.title;
-    
+
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", profile.meta.description);
     }
-    
+
     // Update Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector('meta[property="og:description"]');
-    
+
     if (ogTitle) {
       ogTitle.setAttribute("content", profile.meta.title);
     }
-    
+
     if (ogDescription) {
       ogDescription.setAttribute("content", profile.meta.description);
     }
@@ -54,11 +54,11 @@ const App = () => {
             <Hero />
             <About />
             <Skills />
-            <Experience />
+            {/* <Experience /> */}
             <Projects />
             <Education />
-            <Achievements />
-            <Volunteering />
+            {/* <Achievements /> */}
+            {/* <Volunteering /> */}
             <Contact />
           </main>
           <Footer />

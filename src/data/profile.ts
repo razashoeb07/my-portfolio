@@ -1,181 +1,168 @@
 export default {
   basics: {
-    name: "Jane Doe",
-    title: "Full-Stack Developer",
-    email: "jane@example.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    summary: "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specializing in React, Node.js, and cloud architecture. Committed to creating elegant solutions that solve real-world problems.",
-    avatar: "#YOUR_PROFILE_PHOTO_URL",
+    name: "Shoeb Raza",
+    title: "Python Developer | Data Scientist",
+    email: "shoebraza7084@gmail.com",
+    phone: "+91 7084507525",
+    location: "Greater Noida, Uttar Pradesh, India",
+    summary:
+      "Motivated Python Developer with a solid foundation in DSA, Data Analysis, and Web Development. Proficient in Python, SQL, Pandas, NumPy, and Matplotlib, with hands-on experience in Django. Eager to apply problem-solving skills and continue learning in real-world projects.",
+    avatar: "https://i.ibb.co/LDNCdfNY/Razashoeb.jpg", // Optional: add your profile image URL if needed
     social: [
-      { platform: "LinkedIn", url: "#YOUR_LINKEDIN_URL", icon: "linkedin" },
-      { platform: "GitHub", url: "#YOUR_GITHUB_URL", icon: "github" },
-      { platform: "Twitter", url: "#YOUR_TWITTER_URL", icon: "twitter" }
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/shoebraza02", icon: "linkedin" },
+      { platform: "GitHub", url: "https://github.com/razashoeb07", icon: "github" },
+      { platform: "LeetCode", url: "https://leetcode.com/u/shoeb_0007/", icon: "code" }
     ],
   },
+
   skills: [
+    {
+      category: "Languages",
+      items: [
+        { name: "Python", level: 85 },
+        { name: "C", level: 75 },
+        { name: "C++", level: 70 },
+        { name: "SQL", level: 80 }
+      ]
+    },
     {
       category: "Frontend",
       items: [
-        { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "React", level: 90 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "Next.js", level: 80 }
+        { name: "HTML", level: 65 },
+        { name: "CSS", level: 60 }
       ]
     },
     {
-      category: "Backend",
+      category: "Backend / Tools",
       items: [
-        { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "Python", level: 75 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 85 }
+        { name: "Django", level: 70 },
+        { name: "MySQL", level: 80 },
+        { name: "PostgreSQL", level: 75 },
+        { name: "Git", level: 75 }
       ]
     },
     {
-      category: "DevOps & Tools",
+      category: "Libraries & Frameworks",
       items: [
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 75 },
-        { name: "AWS", level: 70 },
-        { name: "CI/CD", level: 75 },
-        { name: "Jest", level: 80 }
+        { name: "Pandas", level: 85 },
+        { name: "NumPy", level: 85 },
+        { name: "Matplotlib", level: 85 },
+        { name: "Seaborn", level: 80 }
+      ]
+    },
+    {
+      category: "Data Structures & Algorithms (DSA)",
+      items: [
+        { name: "Problem Solving", level: 80 },
+        { name: "Algorithms", level: 75 },
+        { name: "Data Structures", level: 75 }
+      ]
+    },
+    {
+      category: "Platforms / IDEs",
+      items: [
+        { name: "PyCharm", level: 85 },
+        { name: "Jupyter Notebook", level: 90 },
+        { name: "Visual Studio Code", level: 90 }
       ]
     }
   ],
-  experience: [
-    {
-      role: "Senior Frontend Developer",
-      company: "TechCorp Inc.",
-      location: "San Francisco, CA",
-      start: "Jan 2022",
-      end: "Present",
-      bullets: [
-        "Led the frontend development for a dashboard used by 1M+ daily active users",
-        "Reduced bundle size by 40% through code splitting and lazy loading strategies",
-        "Implemented comprehensive test coverage, increasing test coverage from 65% to 95%",
-        "Mentored junior developers and conducted code reviews for team of 8 developers"
-      ]
-    },
-    {
-      role: "Full-Stack Developer",
-      company: "InnovateSoft",
-      location: "Boston, MA",
-      start: "Mar 2020",
-      end: "Dec 2021",
-      bullets: [
-        "Developed and maintained multiple client-facing web applications with React and Node.js",
-        "Implemented RESTful APIs that processed 500K+ daily requests",
-        "Reduced page load times by 60% through performance optimizations",
-        "Collaborated with UX designers to implement responsive mobile-first designs"
-      ]
-    },
-    {
-      role: "Junior Web Developer",
-      company: "CodeStartup",
-      location: "Remote",
-      start: "Jun 2018",
-      end: "Feb 2020",
-      bullets: [
-        "Built and maintained client websites using JavaScript, HTML, and CSS",
-        "Integrated third-party APIs and services into web applications",
-        "Participated in daily stand-ups and weekly sprint planning meetings",
-        "Contributed to company's internal component library"
-      ]
-    }
-  ],
+
   projects: [
     {
-      title: "EcoTracker",
-      description: "A full-stack application allowing users to track and reduce their carbon footprint through daily activities.",
-      image: "#PROJECT1_IMAGE_URL",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"],
-      liveUrl: "#PROJECT1_LIVE_URL",
-      sourceUrl: "#PROJECT1_REPO_URL"
+      title: "Email Spam Classifier",
+      description: "Machine learning model to classify emails as spam or not using Naive Bayes and Logistic Regression. Preprocessing with TF-IDF, tokenization, and Streamlit app.",
+      tags: ["Python", "NLTK", "Pandas", "Scikit-learn", "Streamlit"],
+      liveUrl: "https://mail-spam-classifier-app.streamlit.app/",
+      image: "https://i.ibb.co/fYHZPZdL/spam-filter.png",
+      sourceUrl: "https://github.com/razashoeb07/Email-Spam-Classifier.git"
     },
     {
-      title: "DevConnect",
-      description: "A social platform for developers to share projects, ask questions, and collaborate on open-source initiatives.",
-      image: "#PROJECT2_IMAGE_URL",
-      tags: ["React", "Express", "PostgreSQL", "Socket.io"],
-      liveUrl: "#PROJECT2_LIVE_URL",
-      sourceUrl: "#PROJECT2_REPO_URL"
+      title: "Olympics Data Analysis",
+      description: "Exploratory data analysis of historical Olympic datasets. Created performance insights and athlete trends using Python.",
+      image: "https://i.ibb.co/VY4f4hn6/Olympic.png",
+      tags: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+      liveUrl: "https://olympic-analytics-app.streamlit.app/",
+      sourceUrl: "https://github.com/razashoeb07/olympic-data-analysis.git"
     },
     {
-      title: "MealPrep Pro",
-      description: "An application that helps users plan meals, generate shopping lists, and calculate nutritional information.",
-      image: "#PROJECT3_IMAGE_URL",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-      liveUrl: "#PROJECT3_LIVE_URL",
-      sourceUrl: "#PROJECT3_REPO_URL"
+      title: "IPL-Data Analysis",
+      description: "Analyzed IPL matches and player performances using visualizations like strike rate, batting averages, and win predictions.",
+      image: "https://i.ibb.co/hxmVhpsr/IPL-Data-Analysis.png",
+      tags: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+      sourceUrl: "https://github.com/razashoeb07/IPL-Data-Analysis.git"
+    },
+    {
+      title: "Library Management System",
+      description: "Web-based system to manage library resources built using Django and MySQL backend.",
+      image: "https://i.ibb.co/5XmJ4FYs/LMS.png",
+      tags: ["Python", "Django", "MySQL"],
+      sourceUrl: "#"
     }
   ],
+
   education: [
     {
-      degree: "M.S. Computer Science",
-      institution: "Stanford University",
-      location: "Stanford, CA",
-      start: "2016",
-      end: "2018",
-      description: "Focused on Human-Computer Interaction and Database Systems. Thesis on adaptive user interfaces."
+      degree: "Master of Computer Applications (MCA)",
+      institution: "Sharda University",
+      location: "Uttar Pradesh, India",
+      start: "Aug 2023",
+      end: "Jun 2025",
+      description: "Relevant Coursework: OOP, Databases, DSA, Discrete Math"
     },
     {
-      degree: "B.S. Computer Science",
-      institution: "MIT",
-      location: "Cambridge, MA",
-      start: "2012",
-      end: "2016",
-      description: "Minor in Mathematics. Dean's List all semesters. Participated in Hackathon team."
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "Jamia Hamdard University",
+      location: "Delhi, India",
+      start: "Aug 2019",
+      end: "May 2022",
+      description: "CGPA: 7.06 | Studied core computing and programming fundamentals"
     }
   ],
+
   certifications: [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2022",
-      url: "#AWS_CERTIFICATION_URL"
+      name: "Python with Data Structures and Algorithms",
+      issuer: "Code and Debug",
+      date: "2024",
+      url: "https://drive.google.com/file/d/1MgVhw5PrbSXR5xHM4Mr7pGQXestjVq13/view?usp=sharing"
     },
     {
-      name: "Google Professional Cloud Developer",
-      issuer: "Google Cloud",
-      date: "2021",
-      url: "#GOOGLE_CERTIFICATION_URL"
-    }
-  ],
-  achievements: [
-    {
-      title: "First Place, TechCrunch Hackathon",
-      date: "2021",
-      description: "Led team of 4 developers to create an accessibility-focused web application in 48 hours."
+      name: "Geoprocessing Using Python",
+      issuer: "ISRO",
+      date: "2024",
+      url: "https://drive.google.com/file/d/1GGjV6KnGWLCmi5JqknwS4I5x5BzgYUZd/view?usp=sharing"
     },
     {
-      title: "Open Source Contributor",
-      date: "2019 - Present",
-      description: "Regular contributor to React ecosystem projects with 20+ merged pull requests."
-    }
-  ],
-  volunteering: [
-    {
-      role: "Coding Instructor",
-      organization: "Code for Kids",
-      start: "2020",
-      end: "Present",
-      description: "Teach weekly programming classes to underserved middle school students."
+      name: "Introduction to NLP",
+      issuer: "Infosys Springboard",
+      date: "2024",
+      url: "https://drive.google.com/file/d/14CRCNIrBnz98TWGPRcoUS29oUo6cVJoG/view?usp=sharing"
     },
     {
-      role: "Tech Mentor",
-      organization: "Women Who Code",
-      start: "2019",
-      end: "Present",
-      description: "Mentor early-career women in technology careers through monthly meetups."
+      name: "Deep Learning for Developers",
+      issuer: "Infosys Springboard",
+      date: "2024",
+      url: "https://drive.google.com/file/d/1qU-oWthFk9-AZWBYF4gxA9SW4oxiR8XQ/view?usp=sharing"
+    },
+    {
+      name: "Information Security",
+      issuer: "Great Learning",
+      date: "2024",
+      url: "https://drive.google.com/file/d/1emgmHg5Pq_4GwuULA2a5AmgoEo6p6awh/view?usp=sharing"
+    },
+    {
+      name: "Python Programming",
+      issuer: "Guvi",
+      date: "2024",
+      url: "https://drive.google.com/file/d/12F470eVPZstpVZ93G1v9YaTYpo3zOMiq/view?usp=sharing"
     }
   ],
+
   meta: {
-    title: "Jane Doe | Full-Stack Developer",
-    description: "Portfolio and resume of Jane Doe, Full-Stack Developer specializing in React, Node.js and cloud architecture.",
-    twitterHandle: "@janedoe",
+    title: "Shoeb Raza | Python Developer & Data Scientist",
+    description: "Portfolio and résumé of Shoeb Raza, Python Developer specializing in data analysis, Django, and DSA.",
+    twitterHandle: "",
     language: "en",
     themeColor: "#2563eb"
   }
