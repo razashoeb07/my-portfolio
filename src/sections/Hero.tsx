@@ -80,7 +80,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <Button className="bg-primary hover:bg-primary/90" asChild>
-                <a href="/Shoeb_Raza_Resume.pdf" download>
+                <a href="/Shoebraza_Resume.pdf" download>
                   <Download className="mr-2 h-4 w-4" /> Download Resume
                 </a>
               </Button>
