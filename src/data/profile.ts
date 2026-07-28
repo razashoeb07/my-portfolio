@@ -5,7 +5,7 @@ export default {
     email: "shoebraza7084@gmail.com",
     phone: "+91 7084507525",
     location: "New Delhi, Delhi, India",
-    summary: "Python Developer with strong skills in Data Structures & Algorithms, backend development, Development and data analysis. Proficient in Python, SQL, Pandas, NumPy, and building automation-driven, scalable solutions.",
+    summary: "Python Developer with strong skills in Data Structures & Algorithms, Backend Development, Data Analysis, and Application Development. Proficient in Python, SQL, Pandas, NumPy, and building automation-driven, scalable solutions. Currently exploring Generative AI, RAG (Retrieval-Augmented Generation), and LangChain to develop intelligent AI-powered applications",
     avatar: "https://i.ibb.co/LDNCdfNY/Razashoeb.jpg", // Optional: add your profile image URL if needed
     social: [
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/shoebraza02", icon: "linkedin" },
@@ -94,12 +94,12 @@ experience: [
     start: "Nov 2025",
     end: "Present",
 
-    project: "NAFED PR Division ERP Automation System",
+    project: "NAFED ERP Automation System ",
 
     projectWork: [
-      "Developed backend workflows and business logic in Python using Frappe Framework to automate service orders, vendor onboarding, tendering, invoicing, and grievance tracking for NAFED.",
-      "Built reports and data validations enabling real-time monitoring of vendor transactions and PR operations.",
-      "Tools: Python, JS, Frappe, ERPNext, MySQL/MariaDB."
+      "developed backend workflows and business logic in Python using Frappe Framework to automate service orders, vendor onboarding, tendering, invoicing, and grievance tracking for NAFED.",
+      "Built reports and data validations enabling real-time monitoring of vendor transactions and PR operations",
+      "Tools: Python, JavaScript (Frappe Framework), Frappe, ERPNext, MySQL/MariaDB"
     ],
 
     responsibilities: [
@@ -114,8 +114,8 @@ experience: [
   projects: [
     {
       title: "Real-Time Email Spam Filtering Integration",
-      description: "Machine learning model to classify emails as spam or not using Naive Bayes and Logistic Regression. Preprocessing with TF-IDF, tokenization, and Streamlit app.",
-      tags: ["Python", "NLTK", "Pandas", "Scikit-learn", "Streamlit"],
+      description: "Built a real-time email spam detection system by integrating the Gmail API with a machine learning–based spam classifier. The system securely connects to a Gmail account using OAuth 2.0, fetches incoming emails in real time, preprocesses the email content, and classifies messages as Spam or Not Spam using trained ML models ",
+      tags: ["Python, Gmail API, OAuth 2.0, Pandas, Scikit-learn, NLTK, Streamlit, TF-IDF"],
       liveUrl: "https://mail-spam-classifier-app.streamlit.app/",
       image: "https://i.ibb.co/fYHZPZdL/spam-filter.png",
       sourceUrl: "https://github.com/razashoeb07/sms-spam-classification-version-2.git"
