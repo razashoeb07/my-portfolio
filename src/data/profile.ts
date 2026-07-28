@@ -150,8 +150,8 @@ experience: [
       institution: "Sharda University",
       location: "Uttar Pradesh, India",
       start: "Aug 2023",
-      end: "Jun 2025",
-      description: "Relevant Coursework: OOP, Databases, DSA, Discrete Math"
+      end: "May 2025",
+      description: "CGPA: 815"
     },
     {
       degree: "Bachelor of Computer Applications (BCA)",
@@ -159,7 +159,7 @@ experience: [
       location: "Delhi, India",
       start: "Aug 2019",
       end: "May 2022",
-      description: "CGPA: 7.06 | Studied core computing and programming fundamentals"
+      description: "CGPA: 8.35"
     }
   ],
 
