@@ -89,7 +89,7 @@ export default {
 experience: [
   {
     company: "Stackerbee Technologies",
-    role: "Associate Python Developer",
+    role: "Python Developer",
     location: "New Delhi, IN",
     start: "Nov 2025",
     end: "Present",
